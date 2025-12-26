@@ -77,7 +77,7 @@ Developed for **KU HackFest 2025** 🏆
 
 ## 🏗 How It Works
 
-![System Architecture](https://ibb.co/Kcr4GqD6)
+![System Architecture](https://i.ibb.co/V0qnNSxV/Certi-Chain.png)
 
 ### Workflow
 
