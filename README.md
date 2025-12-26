@@ -478,7 +478,7 @@ contract CertificateVerification {
 
 ## 📊 Presentation
 
-View full project presentation: [CertiChain Presentation](https://www.canva.com/design/DAG8kS64qgE/DYwDg0qsKPW3bELZKa5MNA/edit)
+View full project presentation: [CertiChain Presentation](https://www.canva.com/design/DAG8kS64qgE/DYwDg0qsKPW3bELZKa5MNA/edit?utm_content=DAG8kS64qgE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ---
 
