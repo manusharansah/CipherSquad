@@ -33,14 +33,98 @@ const PROVIDER_URL = process.env.PROVIDER_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY; // Your wallet private key
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS; // Deployed contract address
 
-// Smart Contract ABI (simplified - replace with your actual ABI)
+
+
 const CONTRACT_ABI = [
-  "function issueCertificate(bytes32 certificateHash, string memory certificateId, string memory studentName) public returns (bool)",
-  "function verifyCertificate(bytes32 certificateHash) public view returns (bool, uint256, string memory, string memory)",
-  "event CertificateIssued(bytes32 indexed certificateHash, string certificateId, string studentName, uint256 timestamp)"
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "certHash",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			}
+		],
+		"name": "CertificateIssued",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "certHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "CertificateRevoked",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "certHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "issueCertificate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "certHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "revokeCertificate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "certHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "verifyCertificate",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "isValid",
+				"type": "bool"
+			},
+			{
+				"internalType": "address",
+				"name": "issuer",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "issuedAt",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
 ];
 
-// Initialize provider and contract
 let provider, wallet, contract;
 
 try {
