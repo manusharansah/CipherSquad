@@ -2272,9 +2272,14 @@ function App() {
               <Sparkles className="w-6 h-6 text-yellow-300 absolute -top-2 -right-2 animate-pulse" />
             </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mb-3 tracking-tight">
-            Blockchain Certificate System
-          </h1>
+          <div>
+  <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mb-3 tracking-tight">
+    CertiChain
+  </h1>
+  <h2 className="text-3xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 mb-3 tracking-tight">
+    Blockchain Powered Certificate Issuance & Verification System
+  </h2>
+</div>
           <p className="text-cyan-100 text-lg font-light">
             Secure, Transparent, and Immutable Certificate Verification with QR Codes & IPFS
           </p>
